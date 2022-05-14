@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>PREDICTION</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="static/css/style1.css" rel="stylesheet">
+  <style type="text/css">
+    body {
+      background-image: url('/static/img/background.png');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+    }
+
+    #ui {
+      background-color : #343a40;
+      padding: 30px;
+      margin-top: 50px;
+      border-radius: 10px;
+    }
+
+    #ui label,
+    h1 {
+      color: #fff;
+
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="/">CIG</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#team">Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#connect">Connect</a>
+      </li>
+  </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-3"></div>
+      <div class="col-lg-6">
+        <div class="ui" id="ui"  >
+          <h1 class="text-center">CHURN PREDICTION</h1>
+          <form class="form-group" action="/predict"method="post">
+            <div class="row">
+              <div class="col-lg-6">
+                <label>Credit Score</label>
+                <input type="text" name="Credit score" class="form-control" placeholder="Enter the credit score" required="required">
+              </div>
+
+              <div class="col-lg-6">
+                <label>Age</label>
+                <input type="text" name="Age" class="form-control" placeholder="Enter your age" required="required">
+              </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <label>Tenure</label>
+                <input type="text" name="Tenure" class="form-control" placeholder="Enter your tenure" required="required">
+              </div>
+
+              <div class="col-lg-6">
+                <label>Balance</label>
+                <input type="text" name="Balance" class="form-control" placeholder="Enter your balance" required="required">
+              </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+              <div class="col-lg-6">
+                <label>Number of products bought</label>
+                <input type="text" name="NoOfProducts" class="form-control" placeholder="Enter the items bought" required="required">
+              </div>
+
+              <div class="col-lg-6">
+                <label>Estimated Salary</label>
+                <input type="text" name="EstimatedSalary" class="form-control" placeholder="Enter your estimated salary" required="required">
+              </div>
+            </div>
+
+            <br>
+
+            <label>Has credit card</label>
+            <select name="HasCrCard" required="required" class="form-control">
+              <option>Choose....</option>
+              <option value="Yes">YES</option>
+              <option value="No">NO</option>
+            </select>
+
+            <br>
+
+            <label>Is an active member</label>
+            <select name="IsActiveMember" required="required" class="form-control">
+              <option>Choose....</option>
+              <option value="Yes">YES</option>
+              <option value="No">NO</option>
+            </select>
+
+            <br>
+
+            <label>Country</label>
+            <select name="Geography" required="required" class="form-control">
+              <option>Choose....</option>
+              <option value="France">France</option>
+              <option value="Germany">Germany</option>
+              <option value="Spain">Spain</option>
+            </select>
+
+            <br>
+
+            <label>Gender</label>
+            <select name="Gender" required="required" class="form-control">
+              <option>Choose gender</option>
+              <option value="Male">Male</option>
+              <option value="Female">Female</option>
+            </select>
+
+            <br>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg">PREDICT</button>
+            
+          </form>
+        </div>
+        
+        <div style="color: white; font-size : 25px; text-align : center; background-color :#343a40" >
+          {{ prediction_text }}
+        </div>
+        
+      </div>
+    </div>
+    
+    
+    <br>
+    <br>
+    <br>
+    
+
+    <footer class="container-fluid text-center " style="background-color: #343a40; color: white;">
+
+
+      <p>Contact us</p>
+      <a style="color: white" href="mailto:customerisgod45@gmail.com">customerisgod45@gmail.com</a>
+      <br>
+      <br>
+      <p>Copyright 2021 - CIG  </p>
+    
+</footer>
+</body>
+
+</html>

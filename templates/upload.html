@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Customer Churn</title>
+    <title>CIG</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+  <link href="static/css/style1.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top">
+<div class="container-fluid">
+  <a class="navbar-brand" href="/">CIG</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link" href="/">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#services">Services</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#team">Team</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="/#connect">Connect</a>
+      </li>
+  </div>
+</div>
+</nav>
+<div id="dlides" class="carousel slide" data-ride="carousel">
+  <ul class="carousel-indicators">
+    <li data-target="#slides" data-slide-to="0" class active></li>
+  </ul>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="static/img/background.png">
+      <div class="carousel-caption">
+   
+
+        <h1>Upload your CSV File</h1><br>  
+
+    <form action="/predictioninfile" method="post" enctype=multipart/form-data>
+      
+        <label for="myfile">Select a file:</label>
+        <input class="btn btn" type="file" id="myfile" name="myfile" required="required"><br><br>    
+        <br>    
+        <button class="btn btn-light" type="submit">Submit</button>
+        
+    </form>
+ 
+   
+      </div>  
+    </div>
+  </div>
+</div>
+
+
+<footer class="container-fluid text-center" style="background-color: #343a40; color: white">
+
+
+      <p>Contact us</p>
+      <a style="color: white" href="mailto:customerisgod45@gmail.com">customerisgod45@gmail.com</a>
+      <br>
+      <br>
+      <p>Copyright 2021 - CIG  </p>
+    
+</footer>
+
+</body>
+</html>
